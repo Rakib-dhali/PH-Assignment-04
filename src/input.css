@@ -1,15 +1,21 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
 
 @theme {
   --font-geist: "Geist", sans-serif;
 
-  --color-primary: #3B82F6;
-  --color-body: #F8FAFC;
-  --color-blue: #002C5C;
-  --color-green: #10B981;
-  --color-red: #EF4444;
-  --color-grey: #64748B;
-  --color-body: #F8FAFC;
+  --color-body: #f8fafc;
+  --color-blue: #002c5c;
+  --color-green: #10b981;
+  --color-red: #ef4444;
+  --color-grey: #64748b;
+  --color-dark-grey: #323b49;
+  --color-border: #faf2f4;
+  --color-hr: #e6e7e9;
+  --color-light-blue: #3b82f6;
+  --color-body: #f8fafc;
+}
 
+.flex-center {
+  @apply flex items-center justify-center;
 }

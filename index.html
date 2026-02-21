@@ -1,13 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <link rel="icon" href="./assets/jobs.png">
-    <link href="./src/output.css" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="icon" href="./assets/jobs.png" />
+    <link href="./src/output.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Job Application Tracker</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body class="w-full h-screen bg-body font-geist">
+    <section class="md:w-full w-11/12 h-screen max-w-277.5 mx-auto">
+      <section class="top flex flex-col md:gap-13 gap-5 md:mt-15 mt-10">
+        <h1
+          class="text-blue text-2xl md:text-[32px] font-bold leading-8 md:text-left text-center"
+        >
+          Job Application Tracker
+        </h1>
+        <div class="flex items-center justify-between md:gap-4 gap-2">
+          <div
+            class="bg-white w-full md:p-5 p-3 border-2 border-border rounded-lg"
+          >
+            <p class="text-dark-grey font-medium text-xs md:text-sm mb-2">
+              Total
+            </p>
+            <div id="total-jobs-count" class="text-blue font-bold">8</div>
+          </div>
+          <div
+            class="bg-white w-full md:p-5 p-3 border-2 border-border rounded-lg"
+          >
+            <p class="text-dark-grey font-medium text-xs md:text-sm mb-2">
+              Interview
+            </p>
+            <div id="interview-counts" class="font-bold text-green">0</div>
+          </div>
+          <div
+            class="bg-white w-full md:p-5 p-3 border-2 border-border rounded-lg"
+          >
+            <p class="text-dark-grey font-medium text-xs md:text-sm mb-2">
+              Rejected
+            </p>
+            <div id="rejected" class="font-bold text-red">0</div>
+          </div>
+        </div>
+      </section>
+      <hr class="border-b border-hr mt-5 md:mt-7.5" />
+      <section class="bottom md:gap-4 gap-3 mt-5 md:mt-7.5">
+        <div class="head flex items-center justify-between w-full mb-4 md:mb-6">
+          <h2 class="md:text-xl text-blue font-semibold">Available Jobs</h2>
+          <div class="font-medium text-grey">
+            <span id="job-counts">8</span> jobs
+          </div>
+        </div>
+        <div class="center flex flex-col gap-4">
+          <div class="button flex justify-start gap-2 mb-4">
+            <button
+              class="all bg-light-blue text-white text-center rounded-lg w-25 px-4 py-3"
+            >
+              All
+            </button>
+            <button
+              class="interview bg-white border-border border rounded-lg text-center text-grey w-25 px-4 py-3"
+            >
+              Interview
+            </button>
+            <button
+              class="reject bg-white w-25 border-border border text-grey text-center rounded-lg px-4 py-3"
+            >
+              Rejected
+            </button>
+          </div>
+        </div>
+      </section>
+    </section>
+    <script src="./scripts/constant.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/machine.js"></script>
+  </body>
 </html>
