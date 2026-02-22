@@ -65,3 +65,7 @@ const jobs = [
       "Knowledge of network security, penetration testing, and ethical hacking.",
   },
 ];
+
+const interviews = [];
+const rejections = [];
+
