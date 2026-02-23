@@ -69,6 +69,7 @@ function renderSection(array) {
 
     deleteBtn.addEventListener("click", () => {
       array.splice(index, 1);
+      updateSectionCount(array);
       updateCounts();
       renderSection(array);
     });
