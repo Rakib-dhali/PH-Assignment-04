@@ -19,10 +19,10 @@ function renderSection(array) {
     card.innerHTML = `
       <div class="flex flex-col items-center">
         <img class="md:size-25 size-20 md:mb-5 mb-4" src="./assets/jobs.png" alt="" />
-        <h2 class="font-semibold text-2xl text-blue mb-1">
+        <h2 class="font-semibold text-2xl text-blue mb-1 text-center text-balance">
           No Jobs Available
         </h2>
-        <p class="text-grey">Check back soon for new job opportunities</p>
+        <p class="text-grey text-center text-balance">Check back soon for new job opportunities</p>
       </div>
     `;
 
@@ -32,31 +32,31 @@ function renderSection(array) {
 
   array.forEach((job, index) => {
     const card = document.createElement("div");
-    card.className = "job-card";
+    card.className = "job-card ";
 
     card.innerHTML = `
-      <div class="bg-white rounded-lg border-2 border-border md:p-6 p-4">
+      <div class="bg-white rounded-lg border-2 border-border md:p-6 p-4 ">
         <div class="flex justify-between">
-          <h3 class="text-blue text-lg font-semibold">${job.company}</h3>
+          <h3 class="text-blue text-lg font-semibold leading-6.5">${job.company}</h3>
           <button class="deleteBtn border-grey border-2 size-8 rounded-full flex-center">
             <img src="./assets/trash.svg" alt=""/>
           </button>
         </div>
 
-        <p class="text-grey mb-3">${job.role}</p>
+        <p class="text-grey mb-3 leading-5.5">${job.role}</p>
 
-        <div class="mb-3 text-sm text-grey">
+        <div class="mb-3 text-sm text-grey leading-5">
           ${job.location} • ${job.type} • ${job.salary}
         </div>
 
-        <p class="mb-3 text-sm text-dark-grey">${job.requirement}</p>
+        <p class="mb-3 text-sm text-dark-grey leading-5">${job.requirement}</p>
 
-        <div class="flex gap-3">
-          <button class="interview-btn uppercase px-3 py-2 text-green border-2 border-green rounded-lg text-sm">
+        <div class="flex gap-3 md:gap-5">
+          <button type="button" class="interview-btn uppercase px-3 py-2 text-green opacity-80 hover:opacity-100 border-2 border-green rounded-lg text-sm font-semibold active:scale-95 leading-5 transition-all ease-in-out duration-200">
             Interview
           </button>
 
-          <button class="rejected-btn uppercase px-3 py-2 text-red border-2 border-red rounded-lg text-sm">
+          <button type="button" class="rejected-btn uppercase px-3 py-2 text-red opacity-80 hover:opacity-100 border-2 border-red rounded-lg text-sm font-semibold active:scale-95 leading-5 transition-all ease-in-out duration-200">
             Rejected
           </button>
         </div>
@@ -114,7 +114,6 @@ allSecBtn.addEventListener("click", () => {
 interviewSecBtn.addEventListener("click", () => {
   renderSection(interviews);
   updateSectionCount(interviews);
-  console.log(interviews.length);
   allSecBtn.className = inactive;
   interviewSecBtn.className = active;
   rejectedSecBtn.className = inactive;
